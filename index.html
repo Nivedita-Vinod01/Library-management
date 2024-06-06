@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Library Management System</h1>
         <div class="form-container">
-            <h2>Add Book</h2>
+            <h2>Add/Edit Book</h2>
             <form id="bookForm">
                 <label for="bookNumber">Book Number:</label>
                 <input type="text" id="bookNumber" required>
@@ -18,24 +18,28 @@
                 <input type="text" id="bookName" required>
                 <label for="issuerName">Name of Issuer:</label>
                 <input type="text" id="issuerName" required>
-                <button type="submit">Add Book</button>
+                <button type="submit">Save Book</button>
             </form>
+            <button id="showBooksButton">Show All Books</button>
         </div>
-        <div class="book-list">
-            <h2>All Books</h2>
-            <table id="booksTable">
-                <thead>
-                    <tr>
-                        <th>Book Number</th>
-                        <th>Book Name</th>
-                        <th>Issuer Name</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="booksTableBody">
-                    <!-- Books will be displayed here -->
-                </tbody>
-            </table>
+        <div id="booksModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>All Books</h2>
+                <table id="booksTable">
+                    <thead>
+                        <tr>
+                            <th>Book Number</th>
+                            <th>Book Name</th>
+                            <th>Issuer Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="booksTableBody">
+                        <!-- Books will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <script src="scripts.js"></script>
